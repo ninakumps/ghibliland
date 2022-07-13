@@ -1,10 +1,14 @@
-.App {
-  text-align: center;
+body {
+  background-color: #202020;
+  color:#fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pointer {
+  cursor: pointer;
+}
+
+.App, h1 {
+  text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -28,11 +32,67 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-left: 50px;
+}
+
+.searchInput input {
+  width: 100%;
+  color: #fff;
+  background-color: #080808;
+  border: solid 2px;
+}
+
+.searchIcon {
+  color:#fff;
+}
+
+.searchResult {
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 10px;
+  gap: 32px;
+}
+
+.movieCard {
+  max-width: 250px;
+}
+.movie img {
+  max-width: 100%;
+}
+
+.modal {
+  background: rgb(63, 50, 50);
+  padding: 24px;
+  margin: 0 48px;
+}
+
+.modalInfo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 24px;
+}
+
+.modal img {
+  max-width: 80%;
+  padding-bottom: 64px;
+  justify-self: center;
+}
+
+.closeIcon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+h2 {
+  margin: 0;
+}
+
+.movieDescription {
+  margin-bottom: 32px;
 }
