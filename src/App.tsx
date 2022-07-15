@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { MovieCard } from "./MovieCard";
 import { IGhibli } from "./ghibli.type";
-import { BiSearchAlt2 } from "react-icons/bi";
+import { MovieCard } from "./MovieCard";
 
 const App = () => {
   const [movies, setMovies] = useState<IGhibli[]>([]);
@@ -42,14 +41,13 @@ const App = () => {
             onChange={(event) => setSearchMovie(event.target.value)}
           />
         </div>
-        <div className="searchIcon">
-          <BiSearchAlt2 />
-        </div>
       </div>
       {movies?.length > 0 ? (
         <div className="searchResult">
           {movies
-            .filter((movie) => movie.title.toLowerCase().includes(searchMovie))
+            .filter((movie) =>
+              movie.title.toLowerCase().includes(searchMovie.toLowerCase())
+            )
             .map((movie) => (
               <div key={movie.id} className="movieCard">
                 <MovieCard movie={movie} />

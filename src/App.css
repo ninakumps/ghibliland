@@ -1,5 +1,5 @@
 body {
-  background-color: #202020;
+  background-color: #141414;
   color:#fff;
 }
 
@@ -33,21 +33,16 @@ body {
 }
 
 .search {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  margin-left: 50px;
+  margin-left: 128px;
 }
 
 .searchInput input {
-  width: 100%;
   color: #fff;
   background-color: #080808;
   border: solid 2px;
-}
-
-.searchIcon {
-  color:#fff;
+  padding-left: 16px;
+  height: 4em;
+  width: 16em;
 }
 
 .searchResult {
@@ -60,16 +55,31 @@ body {
 }
 
 .movieCard {
-  max-width: 250px;
+  max-width: 230px;
+  position: relative;
+  transition: transform 0.2s;
 }
+
+.movieCard:hover{
+  transform: scale(1.1);
+}
+
 .movie img {
   max-width: 100%;
+  border-radius: 10%;
+}
+
+.popup-content {
+  display: flex;
+  justify-content: center;
 }
 
 .modal {
-  background: rgb(63, 50, 50);
+  background: #202020;
   padding: 24px;
   margin: 0 48px;
+  max-width: 60%;
+  border-radius: 3%;
 }
 
 .modalInfo {
